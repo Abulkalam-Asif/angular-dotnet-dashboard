@@ -1,0 +1,50 @@
+<div class="dashboard-container">
+  <!-- Header -->
+  <header class="dashboard-header">
+    <h1>Client Dashboard</h1>
+    <nav>
+      <ul>
+        <!-- <li><a routerLink="/admin-dashboard">Admin View</a></li>
+        <li><a routerLink="/client-dashboard">Dashboard</a></li> -->
+        <li><a routerLink="/login">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dashboard-content">
+    <!-- Clients Table Section -->
+    <section class="dashboard-section clients-table-section">
+      <h2>Clients</h2>
+      <table class="w-100">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Ledger Name</th>
+            <th>Contact Pincode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let client of clients">
+            <td>{{ client.id }}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.ledgerName }}</td>
+            <td>{{ client.contact_Pincode }}</td>
+            <td align="middle">
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="deleteClient(client.id)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="dashboard-section">
+      <a href="/add-client" class="btn btn-primary">Add Client</a>
+    </section>
+  </main>
+</div>

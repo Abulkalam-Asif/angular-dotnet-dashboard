@@ -1,0 +1,173 @@
+<div class="add-order-container">
+  <h1>Add Order</h1>
+  <form (ngSubmit)="onSubmit()" class="add-order-form">
+    <div class="add-order-section">
+      <h2 class="add-order-heading">WO Details</h2>
+      <div class="form-group">
+        <label for="ClientOrderNo">Client Order No</label>
+        <input
+          type="text"
+          id="ClientOrderNo"
+          [(ngModel)]="newOrder.ClientOrderNo"
+          name="ClientOrderNo"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ClientId">Client Name</label>
+        <select
+          id="ClientId"
+          [(ngModel)]="newOrder.ClientId"
+          name="ClientId"
+          class="form-control"
+        >
+          <option *ngFor="let client of clients" [value]="client.id">
+            {{ client.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="OrderDate">Order Date</label>
+        <input
+          type="date"
+          id="OrderDate"
+          [(ngModel)]="newOrder.OrderDate"
+          name="OrderDate"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ReleaseDate">Release Date</label>
+        <input
+          type="date"
+          id="ReleaseDate"
+          [(ngModel)]="newOrder.ReleaseDate"
+          name="ReleaseDate"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="StartDate">Start Date</label>
+        <input
+          type="date"
+          id="StartDate"
+          [(ngModel)]="newOrder.StartDate"
+          name="StartDate"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="EndDate">End Date</label>
+        <input
+          type="date"
+          id="EndDate"
+          [(ngModel)]="newOrder.EndDate"
+          name="EndDate"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="Remarks">Remarks</label>
+        <input
+          type="text"
+          id="Remarks"
+          [(ngModel)]="newOrder.Remarks"
+          name="Remarks"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Status">Status</label>
+        <input
+          type="text"
+          id="Status"
+          [(ngModel)]="newOrder.Status"
+          name="Status"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="add-order-section">
+      <h2 class="add-order-heading">Invoicing Terms</h2>
+      <div class="form-group">
+        <label for="InvoicingTerms">Invoicing Terms</label>
+        <input
+          type="text"
+          id="InvoicingTerms"
+          [(ngModel)]="newOrder.InvoicingTerms"
+          name="InvoicingTerms"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="add-order-section">
+      <h2 class="add-order-heading">Contact Details</h2>
+      <div class="form-group">
+        <label for="ContactName">Contact Name</label>
+        <input
+          type="text"
+          id="ContactName"
+          [(ngModel)]="newOrder.ContactName"
+          name="ContactName"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactNo">Contact No</label>
+        <input
+          type="text"
+          id="ContactNo"
+          [(ngModel)]="newOrder.ContactNo"
+          name="ContactNo"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactEmail">Contact Email</label>
+        <input
+          type="email"
+          id="ContactEmail"
+          [(ngModel)]="newOrder.ContactEmail"
+          name="ContactEmail"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactFaxNo">Contact Fax No</label>
+        <input
+          type="text"
+          id="ContactFaxNo"
+          [(ngModel)]="newOrder.ContactFaxNo"
+          name="ContactFaxNo"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="add-order-section">
+      <h2 class="add-order-heading">Other Details</h2>
+      <div class="form-group">
+        <label for="OtherRemarks">Other Remarks</label>
+        <input
+          type="text"
+          id="OtherRemarks"
+          [(ngModel)]="newOrder.OtherRemarks"
+          name="OtherRemarks"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="add-order-buttons">
+      <button type="submit" class="btn btn-primary">Add Order</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,292 @@
+<div class="add-client-container">
+  <h1>Add Client</h1>
+  <form (ngSubmit)="onSubmit()" class="add-client-form">
+    <div class="add-client-section">
+      <h2 class="add-client-heading">Client Details</h2>
+      <div class="form-group">
+        <label for="Name">Name</label>
+        <input
+          type="text"
+          id="Name"
+          [(ngModel)]="newClient.name"
+          name="Name"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="PANNo">PAN No.</label>
+        <input
+          type="text"
+          id="PANNo"
+          [(ngModel)]="newClient.PANNo"
+          name="PANNo"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="Code">Code</label>
+        <input
+          type="text"
+          id="Code"
+          [(ngModel)]="newClient.Code"
+          name="Code"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="Station">Station/Branch</label>
+        <input
+          type="text"
+          id="Station"
+          [(ngModel)]="newClient.Station"
+          name="Station"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="CreditPeriod">Credit Period</label>
+        <input
+          type="text"
+          id="CreditPeriod"
+          [(ngModel)]="newClient.CreditPeriod"
+          name="CreditPeriod"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="GSTNo">GST No.</label>
+        <input
+          type="text"
+          id="GSTNo"
+          [(ngModel)]="newClient.GSTNo"
+          name="GSTNo"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="CINNo">CIN No.</label>
+        <input
+          type="text"
+          id="CINNo"
+          [(ngModel)]="newClient.CINNo"
+          name="CINNo"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="IECNo">IEC No.</label>
+        <input
+          type="text"
+          id="IECNo"
+          [(ngModel)]="newClient.IECNo"
+          name="IECNo"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="GSTDate">GST Date</label>
+        <input
+          type="date"
+          id="GSTDate"
+          [(ngModel)]="newClient.GSTDate"
+          name="GSTDate"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="SACCode">SAC Code</label>
+        <input
+          type="text"
+          id="SACCode"
+          [(ngModel)]="newClient.SACCode"
+          name="SACCode"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group col-12">
+        <label for="LedgerId">Ledger Name</label>
+        <select
+          id="LedgerId"
+          [(ngModel)]="newClient.LedgerId"
+          name="LedgerId"
+          class="form-control"
+        >
+          <option
+            *ngFor="let ledger of ledgers"
+            [value]="ledger.companyId"
+            [selected]="ledger === ledgers[0]"
+          >
+            {{ ledger.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="add-client-section">
+      <h2 class="add-client-heading">Other Details</h2>
+      <div class="form-group">
+        <label for="VATNo">VAT No.</label>
+        <input
+          type="text"
+          id="VATNo"
+          [(ngModel)]="newClient.VATNo"
+          name="VATNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="TINno">TIN No.</label>
+        <input
+          type="text"
+          id="TINno"
+          [(ngModel)]="newClient.TINno"
+          name="TINno"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="STNo">ST No.</label>
+        <input
+          type="text"
+          id="STNo"
+          [(ngModel)]="newClient.STNo"
+          name="STNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Remarks">Remarks</label>
+        <input
+          type="text"
+          id="Remarks"
+          [(ngModel)]="newClient.Remarks"
+          name="Remarks"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="add-client-section">
+      <h2 class="add-client-heading">Contact Details Making Payment</h2>
+      <div class="form-group">
+        <label for="ContactName">Contact Name</label>
+        <input
+          type="text"
+          id="ContactName"
+          [(ngModel)]="newClient.ContactName"
+          name="ContactName"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactMobile">Contact Mobile</label>
+        <input
+          type="text"
+          id="ContactMobile"
+          [(ngModel)]="newClient.ContactMobile"
+          name="ContactMobile"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactEmail">Contact Email</label>
+        <input
+          type="email"
+          id="ContactEmail"
+          [(ngModel)]="newClient.ContactEmail"
+          name="ContactEmail"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactAddress">Contact Address</label>
+        <input
+          type="text"
+          id="ContactAddress"
+          [(ngModel)]="newClient.ContactAddress"
+          name="ContactAddress"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactState">Contact State</label>
+        <input
+          type="text"
+          id="ContactState"
+          [(ngModel)]="newClient.ContactState"
+          name="ContactState"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactCountry">Contact Country</label>
+        <input
+          type="text"
+          id="ContactCountry"
+          [(ngModel)]="newClient.ContactCountry"
+          name="ContactCountry"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="ContactPincode">Contact Pincode</label>
+        <input
+          type="text"
+          id="ContactPincode"
+          [(ngModel)]="newClient.ContactPincode"
+          name="ContactPincode"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="IsInvoiceFormat">Is Invoice Format</label>
+        <input
+          type="checkbox"
+          id="IsInvoiceFormat"
+          [(ngModel)]="newClient.IsInvoiceFormat"
+          name="IsInvoiceFormat"
+          class="form-check-input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="IsKYC">Is KYC</label>
+        <input
+          type="checkbox"
+          id="IsKYC"
+          [(ngModel)]="newClient.IsKYC"
+          name="IsKYC"
+          class="form-check-input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="StateCode">State Code</label>
+        <input
+          type="text"
+          id="StateCode"
+          [(ngModel)]="newClient.StateCode"
+          name="StateCode"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="add-client-buttons">
+      <button type="submit" class="btn btn-primary">Add Client</button>
+    </div>
+  </form>
+</div>

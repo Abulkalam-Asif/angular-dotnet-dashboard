@@ -1,0 +1,188 @@
+<div class="add-company-container">
+  <h1>Add Company</h1>
+  <form (ngSubmit)="onSubmit()" class="add-company-form">
+    <div class="add-company-section">
+      <h2 class="add-company-heading">Company Details</h2>
+      <div class="form-group">
+        <label for="Name">Company Name</label>
+        <input
+          type="text"
+          id="Name"
+          [(ngModel)]="newCompany.Name"
+          name="Name"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="RegDate">Registration Date</label>
+        <input
+          type="date"
+          id="RegDate"
+          [(ngModel)]="newCompany.RegDate"
+          name="RegDate"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="RegNo">Registration No</label>
+        <input
+          type="text"
+          id="RegNo"
+          [(ngModel)]="newCompany.RegNo"
+          name="RegNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="PANNo">PAN No</label>
+        <input
+          type="text"
+          id="PANNo"
+          [(ngModel)]="newCompany.PANNo"
+          name="PANNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="TANNo">TAN No</label>
+        <input
+          type="text"
+          id="TANNo"
+          [(ngModel)]="newCompany.TANNo"
+          name="TANNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="TINNo">TIN No</label>
+        <input
+          type="text"
+          id="TINNo"
+          [(ngModel)]="newCompany.TINNo"
+          name="TINNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="CINNo">CIN No</label>
+        <input
+          type="text"
+          id="CINNo"
+          [(ngModel)]="newCompany.CINNo"
+          name="CINNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="ServiceTaxNo">Service Tax No</label>
+        <input
+          type="text"
+          id="ServiceTaxNo"
+          [(ngModel)]="newCompany.ServiceTaxNo"
+          name="ServiceTaxNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="ISORemark">ISO Remark</label>
+        <input
+          type="text"
+          id="ISORemark"
+          [(ngModel)]="newCompany.ISORemark"
+          name="ISORemark"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="GSTNo">GST No</label>
+        <input
+          type="text"
+          id="GSTNo"
+          [(ngModel)]="newCompany.GSTNo"
+          name="GSTNo"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="GSTDate">GST Date</label>
+        <input
+          type="date"
+          id="GSTDate"
+          [(ngModel)]="newCompany.GSTDate"
+          name="GSTDate"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="LicenseStartDate">License Start Date</label>
+        <input
+          type="date"
+          id="LicenseStartDate"
+          [(ngModel)]="newCompany.LicenseStartDate"
+          name="LicenseStartDate"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="LicenseEndDate">License End Date</label>
+        <input
+          type="date"
+          id="LicenseEndDate"
+          [(ngModel)]="newCompany.LicenseEndDate"
+          name="LicenseEndDate"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="add-company-section">
+      <h2 class="add-company-heading">Address</h2>
+      <div class="form-group">
+        <label for="Address">Address</label>
+        <input
+          type="text"
+          id="Address"
+          [(ngModel)]="newCompany.Address"
+          name="Address"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="AddressHtml">Address HTML</label>
+        <input
+          type="text"
+          id="AddressHtml"
+          [(ngModel)]="newCompany.AddressHtml"
+          name="AddressHtml"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="BranchAddress">Branch Address</label>
+        <input
+          type="text"
+          id="BranchAddress"
+          [(ngModel)]="newCompany.BranchAddress"
+          name="BranchAddress"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="add-company-section">
+      <h2 class="add-company-heading">Attachments</h2>
+      <div class="form-group">
+        <label for="LogoUrl">Logo URL</label>
+        <input
+          type="text"
+          id="LogoUrl"
+          [(ngModel)]="newCompany.LogoUrl"
+          name="LogoUrl"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="add-company-buttons">
+      <button type="submit" class="btn btn-primary">Add Company</button>
+    </div>
+  </form>
+</div>
